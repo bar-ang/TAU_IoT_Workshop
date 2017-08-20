@@ -91,6 +91,8 @@
   <ItemGroup>
     <Compile Include="GetStatsActivity.cs" />
     <Compile Include="LogInActivity.cs" />
+    <Compile Include="MEP.cs" />
+    <Compile Include="MEPClient.cs" />
     <Compile Include="RaspberryTable.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
