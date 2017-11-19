@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:minWidth="25px"
+    android:minHeight="25px"
+    style="@style/DefLayout">
+  <TextView
+      android:id="@+id/tv_servname"
+      style="@style/DefText"
+      android:text="[scale's name]"
+      android:visibility="invisible"
+      android:textSize="35px"
+      android:paddingBottom="20dip" />
+  <TextView
+      android:id="@+id/Text1"
+      style="@style/DefText"
+      android:text="Getting weight. Please Wait..." />
+  <ProgressBar
+      android:id="@+id/ProgressCircle"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_centerHorizontal="true"
+      android:layout_margin="20dp"
+      style="@android:style/Widget.ProgressBar.Inverse" />
+  <TextView
+      android:textAppearance="?android:attr/textAppearanceLarge"
+      style="@style/DefText"
+      android:textSize="35px"
+      android:id="@+id/currentWeigh" />
+  <Button
+        android:text="Error in Weighing ?  Click here to delete weigh from database"
+        style="@style/DefButton"
+        android:id="@+id/DeleteButton" />
+  <Button
+        android:text="Weigh Yourself Again"
+       style="@style/DefButton"
+        android:id="@+id/WeighAgainButton" />
+</LinearLayout>

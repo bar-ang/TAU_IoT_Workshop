@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+  <TextView
+     android:text=""
+     android:textAppearance="?android:attr/textAppearanceLarge"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:id="@+id/heightText" />
+  <EditText
+      android:inputType="numberDecimal"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/enterHeight"
+      android:layout_marginRight="0.0dp" />
+  <Button
+      android:text="OK"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/OKButton"
+      android:layout_marginRight="0.0dp" />
+  <Button
+      android:text="Update"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/OKUpdateCaseButton"
+      android:layout_marginRight="0.0dp" />
+  <Button
+     android:text="Update My Height"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:id="@+id/updateButton"
+     android:layout_marginRight="0.0dp" />
+  <Button
+     android:text="Got It"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:id="@+id/FinishActivity"
+     android:layout_marginRight="0.0dp" />
+</LinearLayout>

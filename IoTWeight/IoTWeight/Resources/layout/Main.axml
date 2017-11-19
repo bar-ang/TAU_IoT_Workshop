@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/DefLayout">
+  <TextView
+      android:text="SmartTrack"
+      android:textAppearance="?android:attr/textAppearanceLarge"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/textView1"
+      style="@style/DefH1" />
+  <TextView
+      android:text="The best way to keep track on your body weight!"
+      android:textAppearance="?android:attr/textAppearanceSmall"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/textView3"
+      style="@style/DefH2" />
+  <TextView
+      android:text="Please Log in"
+      android:textAppearance="?android:attr/textAppearanceSmall"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/tv_login_msg"
+      style="@style/DefText" />
+  <Button
+      android:id="@+id/buttonLoginUser"
+      android:onClick="LoginUser"
+      android:text="@string/login_button_text"
+      style="@style/SpreadButton" />
+  <Button
+      android:id="@+id/buttonLoginDiffrentUser"
+      android:onClick="LoginUserAsDifferentUser"
+      android:text="@string/login_diff_button_text"
+      style="@style/SpreadButton" />
+  <ProgressBar
+      android:id="@+id/LoginProgressCircle"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:gravity="center"
+      android:visibility="invisible"
+     android:layout_margin="20.0dp"
+      style="@android:style/Widget.ProgressBar.Inverse" />
+</LinearLayout>

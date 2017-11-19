@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+              android:minWidth="25px"
+    android:minHeight="25px"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   
+     >
+    <TextView
+        android:text="SmartTrack"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:background="#ff009922"
+        android:textColor="#ffffffff"
+        android:textSize="80px"
+        android:id="@+id/textView1" />
+    <TextView
+        android:text="The best way to keep track on your body weight!"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:background="#ff009922"
+        android:textColor="#ffffffff"
+        android:textSize="24px"
+        android:id="@+id/textView3" />
+    <TextView
+        android:text="Please Log in"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView4" />
+    <Button
+        android:id="@+id/buttonLoginUser"
+        android:onClick="LoginUser"
+        android:text="@string/login_button_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+         />
+    <Button
+        android:id="@+id/buttonLoginDiffrentUser"
+        android:onClick="LoginUserAsDifferentUser"
+        android:text="@string/login_diff_button_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+       />
+</LinearLayout>

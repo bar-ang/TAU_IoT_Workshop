@@ -1,0 +1,3 @@
+Combinator guide: https://learn.sparkfun.com/tutorials/load-cell-amplifier-hx711-breakout-hookup-guide/all
+Aplifier guide: https://www.sparkfun.com/products/13879
+weight sensor guide: https://www.dfrobot.com/wiki/index.php/Weight_Sensor_Module_V1

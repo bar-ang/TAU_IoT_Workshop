@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+   style="@style/DefLayout" >
+  <TextView
+      android:text="What do you want to delete?"
+      style="@style/DefText"
+      android:id="@+id/date_display" />
+  <Button
+      android:text="delete all weights up to a selected date"
+      style="@style/DefButton"
+      android:id="@+id/date_select_button" />
+  <Button
+      android:text="delete all weights in a selected date"
+      style="@style/DefButton"
+      android:id="@+id/remove_single_button" />
+  <Button
+      android:text="delete all"
+      style="@style/DefButton"
+      android:id="@+id/remove_all_button" />
+  <Button
+      android:text="OK"
+      style="@style/DefButton"
+      android:id="@+id/OKbutton" />
+  <Button
+      android:text="CANCEL"
+      style="@style/DefButton"
+      android:id="@+id/CancelButton" />
+</LinearLayout>

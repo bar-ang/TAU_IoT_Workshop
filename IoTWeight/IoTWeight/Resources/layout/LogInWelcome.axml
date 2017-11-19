@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:minWidth="25px"
+    android:minHeight="25px"
+    style="@style/DefLayout"
+    android:id="@+id/linearLayout1">
+  <TextView
+      android:text=""
+      android:textAppearance="?android:attr/textAppearanceLarge"
+      style="@style/DefText"
+      android:id="@+id/welcomeText" />
+  <Button
+      android:text="Weight History"
+      android:id="@+id/GetStats"
+      style="@style/DefButton" />
+  <Button
+      android:text="Weigh Yourself"
+      android:id="@+id/StartWeigh"
+      style="@style/DefButton" />
+  <Button
+      android:text="Calculate your BMI"
+      android:id="@+id/BMI"
+      style="@style/DefButton" />
+  <Button
+      android:text="Update Your Profile"
+      android:id="@+id/update"
+      style="@style/DefButton" />
+  <Button
+      android:text="Insert weights for Debugging"
+      android:id="@+id/debuggButton"
+      style="@style/DefButton" />
+  <Button
+      android:text="Log out"
+      android:id="@+id/ButtonLogout"
+      style="@style/DefButton" />
+</LinearLayout>

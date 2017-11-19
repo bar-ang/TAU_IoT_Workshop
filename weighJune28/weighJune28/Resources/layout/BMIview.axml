@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:text="Please Enter Your Height: "
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/heightText" />
+    <EditText
+        android:inputType="numberDecimal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/enterHeight"
+        android:layout_marginRight="0.0dp" />
+    <Button
+        android:text="OK"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/OKButton"
+        android:layout_marginRight="0.0dp" />
+    <Button
+        android:text="Click Here to Find Out Your BMI Category:"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/RecomendedBMI" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/BMI_TextView"
+        android:layout_marginTop="16.0dp" />
+</LinearLayout>

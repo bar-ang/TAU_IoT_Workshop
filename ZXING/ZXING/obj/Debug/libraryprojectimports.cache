@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Paths>
+  <Jars></Jars>
+  <ResolvedResourceDirectories>
+    <ResolvedResourceDirectory>C:\Temp\Repos\TAU_IoT_Workshop\ZXING\ZXING\obj\Debug\__library_projects__\FastAndroidCamera\library_project_imports\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>C:\Temp\Repos\TAU_IoT_Workshop\ZXING\ZXING\obj\Debug\__library_projects__\zxing.monoandroid\library_project_imports\res</ResolvedResourceDirectory>
+  </ResolvedResourceDirectories>
+  <ResolvedAssetDirectories>
+    <ResolvedAssetDirectory>obj\Debug\__library_projects__\FastAndroidCamera\library_project_imports\assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>obj\Debug\__library_projects__\zxing.monoandroid\library_project_imports\assets</ResolvedAssetDirectory>
+  </ResolvedAssetDirectories>
+  <ResolvedEnvironmentFiles />
+  <ResolvedResourceDirectoryStamps>
+    <ResolvedResourceDirectoryStamp>C:\Temp\Repos\TAU_IoT_Workshop\ZXING\ZXING\obj\Debug\__library_projects__\FastAndroidCamera.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>C:\Temp\Repos\TAU_IoT_Workshop\ZXING\ZXING\obj\Debug\__library_projects__\zxing.monoandroid.stamp</ResolvedResourceDirectoryStamp>
+  </ResolvedResourceDirectoryStamps>
+</Paths>

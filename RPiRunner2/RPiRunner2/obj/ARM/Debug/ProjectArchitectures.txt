@@ -1,0 +1,1 @@
+C:\Temp\Repos\TAU_IoT_Workshop\RPiRunner2\RPiRunner2\RPiRunner2.csproj;arm

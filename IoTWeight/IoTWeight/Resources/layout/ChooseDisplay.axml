@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    style="@style/DefLayout">
+  <TextView
+      android:text="Choose Time Period:"
+      android:textAppearance="?android:attr/textAppearanceMedium"
+      style="@style/DefText"
+      android:id="@+id/textView1" />
+  <RadioGroup
+      android:minWidth="25px"
+      android:minHeight="25px"
+      android:layout_width="match_parent"
+      android:layout_height="130.0dp"
+      android:id="@+id/radioGroupTimePeriod">
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="false"
+        android:text="Last Month"
+        android:id="@+id/radioButtonLastMonth" />
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Last 3 Months"
+        android:id="@+id/radioButtonLast3Months" />
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Last 6 Months"
+        android:id="@+id/radioButtonLast6Months" />
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Other"
+        android:id="@+id/radioButtonOther" />
+  </RadioGroup>
+  <TextView
+      android:text="Choose Display Format:"
+      android:textAppearance="?android:attr/textAppearanceMedium"
+      style="@style/DefText"
+      android:id="@+id/textView2"
+      android:layout_marginTop="20.0dp" />
+  <RadioGroup
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/radioGroupDisplayFormat"
+      android:layout_marginBottom="58.5dp">
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="false"
+        android:text="Graph"
+        android:id="@+id/radioButtonGraph" />
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="List"
+        android:id="@+id/radioButtonList" />
+  </RadioGroup>
+  <TextView
+      android:text="Please Enter The Desired Time Period in Years as a decimal number: "
+      android:textAppearance="?android:attr/textAppearanceLarge"
+      style="@style/DefText"
+      android:id="@+id/displayUserTime" />
+  <EditText
+      android:inputType="numberDecimal"
+      style="@style/DefText"
+      android:id="@+id/chooseTime"
+      android:layout_marginRight="0.0dp" />
+  <Button
+      android:text="OK"
+      style="@style/DefButton"
+      android:id="@+id/OKButton" />
+</LinearLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+              style="@style/DefLayout">
+  <TextView
+      android:text=""
+      android:textAppearance="?android:attr/textAppearanceLarge"
+      style="@style/DefText"
+      android:id="@+id/welcomeText" />
+  <Button
+      android:text="Delete Previous Weighs"
+      style="@style/DefButton"
+      android:id="@+id/DeleteWeighs"
+      android:layout_marginTop="18.0dp" />
+  <Button
+      android:text="Update Height"
+      style="@style/DefButton"
+      android:id="@+id/updateHeight"
+      android:layout_marginTop="18.0dp" />
+</LinearLayout>

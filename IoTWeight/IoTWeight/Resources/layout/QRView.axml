@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    style="@style/DefLayout"
+    android:minWidth="25px"
+    android:minHeight="25px">
+  <ImageView
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:src="@drawable/Qrcode"
+        android:layout_gravity="center"
+         />
+  <TextView
+      android:textAppearance="?android:attr/textAppearanceLarge"
+      android:text="Do you see the scale's QR Code? Scan it by clicking on 'scan' to start the weighing."
+      style="@style/DefText"
+      android:id="@+id/QRresult" />
+
+  <TextView
+     android:textAppearance="?android:attr/textAppearanceLarge"
+     style="@style/DefText"
+     android:id="@+id/QRresult" />
+
+  <Button
+        android:text="Scan"
+        style="@style/SpreadButton"
+        android:id="@+id/button1" />
+</LinearLayout>

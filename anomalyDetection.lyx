@@ -1,0 +1,164 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+Let's assume we read from the sensor 
+\begin_inset Formula $n$
+\end_inset
+
+ times and we got the values 
+\begin_inset Formula $x_{1},x_{2},...,x_{n}$
+\end_inset
+
+.
+ We don't know which of them is accurate and which of them isn't, but it
+ is safe to assume that the measures in the middle of the series are more
+ likely to be accurate than those in the edges.
+\end_layout
+
+\begin_layout Standard
+Let us take the 10% of the sample from the middle of the series (that is
+ 
+\begin_inset Formula $x_{0.45n}$
+\end_inset
+
+ to 
+\begin_inset Formula $x_{0.55n}$
+\end_inset
+
+) and assume that most of them are accurate.
+ Mark the subset's mean and stdev as 
+\begin_inset Formula $\mu$
+\end_inset
+
+ and 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ respectively.
+\end_layout
+
+\begin_layout Standard
+Now assume that all the 
+\series bold
+accurate
+\series default
+ 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ come from normal distribution, that is 
+\begin_inset Formula $x_{i}\sim Norm(\mu,\sigma^{2})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Define a threshold 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ that typically should be about 0.05, and say that for each 
+\begin_inset Formula $i\in\{1,...,n\}$
+\end_inset
+
+ , 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ is accurate if and only if 
+\begin_inset Formula $Pr(x_{i})\geq\epsilon$
+\end_inset
+
+ (The probability to get 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ accourding to the normal distribution density function).
+ if 
+\begin_inset Formula $Pr(x_{i})<\epsilon$
+\end_inset
+
+ we say that 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ is 
+\series bold
+inaccurate 
+\series default
+result and thus we will exclude it from our average result.
+\end_layout
+
+\end_body
+\end_document

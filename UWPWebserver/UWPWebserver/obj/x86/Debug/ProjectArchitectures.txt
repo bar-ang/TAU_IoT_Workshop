@@ -1,0 +1,1 @@
+C:\Temp\Repos\TAU_IoT_Workshop\UWPWebserver\UWPWebserver\UWPWebserver.csproj;x86

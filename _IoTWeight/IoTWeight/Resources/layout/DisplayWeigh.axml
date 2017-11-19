@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="10dip">
+  <TextView
+      android:id="@+id/tv_servname"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:text="{{scale's name}}"
+      android:visibility="invisible"
+      android:textSize="35px"
+      android:paddingBottom="20dip" />
+  <TextView
+      android:id="@+id/Text1"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:text="Getting weigh from Raspberry. Please Wait..."
+      android:paddingBottom="20dip" />
+  <ProgressBar
+      android:id="@+id/ProgressCircle"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_centerHorizontal="true"
+      style="@android:style/Widget.ProgressBar.Inverse" />
+  <TextView
+      android:textAppearance="?android:attr/textAppearanceLarge"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/currentWeigh" />
+  <Button
+        android:text="Error in Weighing ?  Click here to delete weigh from database"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/DeleteButton"
+        android:layout_marginTop="18.0dp" />
+  <Button
+        android:text="Weigh Yourself Again"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/WeighAgainButton"
+        android:layout_marginTop="18.0dp" />
+</LinearLayout>

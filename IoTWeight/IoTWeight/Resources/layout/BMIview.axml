@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+              style="@style/DefLayout">
+  <TextView
+      android:text="Please Enter Your Height: "
+      android:textAppearance="?android:attr/textAppearanceLarge"
+      style="@style/DefText"
+      android:id="@+id/heightText" />
+  <EditText
+      android:inputType="numberDecimal"
+      style="@style/DefText"
+      android:id="@+id/enterHeight"
+      />
+  <Button
+      android:text="OK"
+      style="@style/DefButton"
+      android:id="@+id/OKButton"
+      />
+  <TextView
+      style="@style/DefText"
+      android:id="@+id/BMI_TextView"
+      />
+  <TextView
+      style="@style/DefText"
+      android:id="@+id/Category_TextView"
+       />
+  <Button
+      android:text="Click here for more information on BMI categories"
+      android:id="@+id/BMIwikiLink"
+      style="@style/DefButton"
+       />
+</LinearLayout>

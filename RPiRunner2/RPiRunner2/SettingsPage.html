@@ -1,0 +1,141 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Weight Installation Page</title>
+    <style>
+        body {
+            margin-left: 20px;
+            margin-right: 20px;
+            font-family: sans-serif;
+            background-color: darkgreen;
+            color: wheat;
+            /* effect taken from https://css-tricks.com/snippets/css/gradient-text/ */
+            background: -webkit-linear-gradient(white, yellowgreen);
+        }
+        div > div {
+            background-color:khaki;
+            color: black;
+            border-color:darkkhaki;
+            border-style: solid;
+            border-radius: 10px;
+            margin: 10px;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 0px;
+            padding-bottom: 20px;
+        }
+       div.container {
+                width: 1000px;
+                margin:auto;
+       }
+        h1 {
+            text-align: center;
+            color: green;
+            font-weight: 800;
+            font-size: 50px;
+            /* effect taken from: http://markdotto.com/playground/3d-text/ */
+            /* text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);*/
+        }
+        input[type=text], input[type=password] {
+            width: 200px;
+            padding: 3px 5px;
+            margin: 5px;
+            box-sizing: border-box;
+            border: 2px solid;
+            border-color:darkkhaki;
+            background-color:aliceblue;
+            border-radius: 4px;
+        }
+        input[type=button], input[type=submit] {
+            background-color: khaki;
+            border: 2px, solid;
+            border-color: khaki;
+            border-radius: 15px;
+            color: black;
+            padding: 3px 5px;
+            text-decoration: none;
+            margin: 4px 2px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        span.dynamic{
+            color:orangered;
+            font-weight:bold;
+            font-style:italic;
+        }
+    </style>
+</head>
+<body bgcolor="">
+    <div class="container">
+        <h1>Smart Weight Installation page</h1>
+
+        <div>
+            <h2>Give your Weight-Scale a Name</h2>
+            <form method="get">
+                The name will be presented before anyone how wants to weigh.<br />
+                <input type="text" name="name" /><input type="submit" name="chname" value="Change Name" />
+            </form>
+            <span class="dynamic" id="name_feedback"></span>
+        </div>
+        <div>
+            <h2>Change Your Password</h2>
+            <form method="get">
+                For protection we recommend to change the default password to access these settings.<br />
+                Current password: <input type="password" name="curr_pass" /><br />
+                New Password: <input type="password" name="password" /><br />
+                Confirm Password: <input type="password" name="confirm" /><br />
+                <input type="submit" name="chpass" value="Change Password" />
+            </form>
+            <span class="dynamic" id="chpass_feedback"></span>
+        </div>
+        <div>
+            <h2>Register Your Device to the Cloud</h2>
+            <form method="get">
+                insert the weight serial no. that you received with your scale<br />
+                serial: <input type="text" name="serial" /><input type="submit" name="register" value="Register" />
+            </form>
+            <span class="dynamic" id="serial_feedback"></span>
+        </div>
+        <div>
+            <h2>Calibrate Your Scale</h2>
+            You'll need to perform a calibration for your scale so it will give an accurate result. <br />
+            calibration is simple, just follow these instuctions:
+            <ol>
+                <li>Make sure there is nothing on the scale</li>
+                <li>Set the scale's offset by simply pressing on 'Set Offset' (this operation might take a few seconds) </li>
+                <li>Now, place on the scale an object which its weight is known to you</li>
+                <li>Click on 'Set Scale' (this operation might take a few seconds)</li>
+                <li>Write the object's weight in the textbox below</li>
+                <li>click on 'Calibrate'</li>
+                <li>All Set! The device will calculate the values of SCALE and OFFSET that are suitable for you.</li>
+            </ol>
+            <form method="get">
+                <input type="submit" name="soffset" value="Set Offset" id="calib_offset_mes" />
+            </form>
+            <form method="get">
+
+                <input type="submit" name="sscale" value="Set Scale" id="calib_scale_mes" />
+            </form>
+            <br />
+            <form method="get">
+                Known weight: <input type="text" name="known" />kg <br />
+                <input type="submit" name="calibrate" value="Calibrate" id="calibrate" />
+            </form>
+            OR <br />
+            If you already know the values of offset and scale in your device, you can write them in the form below.
+            <form method="get">
+                OFFSET: <input type="text" name="man_offset" /><br />
+                SCALE: <input type="text" name="man_scale" /><br />
+                <input type="submit" name="man_calib" value="Calibrate" id="man_calib" />
+            </form>
+            <form method="get">
+                <input type="submit" name="best_calib" value="Set the best parameters for the scale" id="best_calib" />
+                <sub>*As measured in advanced with the prototype weight-scale</sub>
+            </form>
+            <span class="dynamic" id="calibration_feedback"></span>
+        </div>
+   </div>
+</body>
+</html>

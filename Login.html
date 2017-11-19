@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Weight Installation Page</title>
+    <style>
+        body {
+            margin-left: 20px;
+            margin-right: 20px;
+            font-family: sans-serif;
+            background-color: darkgreen;
+            color: wheat;
+            /* effect taken from https://css-tricks.com/snippets/css/gradient-text/ */
+            background: -webkit-linear-gradient(darkgreen, green);
+        }
+
+        div {
+            background: -webkit-linear-gradient(khaki, darkkhaki);
+            color: black;
+            border-color: greenyellow;
+            border-style: solid;
+            border-radius: 10px;
+            margin: 10px;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 0px;
+            padding-bottom: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            font-weight: 800;
+            font-size: 50px;
+            /* effect taken from: http://markdotto.com/playground/3d-text/ */
+            text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
+        }
+
+        input[type=text], input[type=password] {
+            width: 200px;
+            padding: 3px 5px;
+            margin: 5px;
+            box-sizing: border-box;
+            border: 2px solid;
+            border-color: darkkhaki;
+            background-color: gainsboro;
+            border-radius: 4px;
+        }
+
+        input[type=button], input[type=submit] {
+            background-color: darkkhaki;
+            border: 2px, solid;
+            border-color: darkkhaki;
+            border-radius: 15px;
+            color: black;
+            padding: 3px 5px;
+            text-decoration: none;
+            margin: 4px 2px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body bgcolor="">
+    <h1>Smart Weight Installation page</h1>
+
+    <div>
+        <h2>Please Login:</h2>
+        <form method="get">
+            username:
+            <input type="text" name="username" /><br/>
+            password:
+            <input type="password" name="password" /><br />
+            <input type="submit"  value="Login" />
+        </form>
+    </div>
+    <span id="auth_message"></span>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<resources>
+  <style name="DefaultTheme" parent="AppTheme">
+    <item name="android:background">#ffffffdd</item>
+  </style>
+  <style name="DefaultButton" parent="DefaultTheme">
+    <item name="android:background">#ffffffdd</item>
+    <item name="android:layout_margin">20.0dp</item>
+  </style>
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+       
+    </style>
+
+</resources>

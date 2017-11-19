@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:minWidth="25px"
+    android:minHeight="25px"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/linearLayout1">
+    <TextView
+        android:text=""
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/welcomeText" />
+    <Button
+        android:text="Weight History"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/GetStats"
+        android:layout_marginTop="18.0dp" />
+    <Button
+        android:text="Weigh Yourself"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18.0dp"
+        android:id="@+id/StartWeigh" />
+    <Button
+        android:text="Calculate your BMI"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18.0dp"
+        android:id="@+id/BMI" />
+    <Button
+        android:text="Update Your Profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18.0dp"
+        android:id="@+id/update" />
+    <Button
+        android:text="Insert weights for Debugging"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18.0dp"
+        android:id="@+id/debuggButton" />
+    <Button
+        android:text="Log out"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18.0dp"
+        android:id="@+id/ButtonLogout" />
+</LinearLayout>
