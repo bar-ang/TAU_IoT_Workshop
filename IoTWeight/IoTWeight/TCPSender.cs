@@ -88,7 +88,7 @@ namespace IoTWeight
             byte[] bmsg;
             int msize;
             string msg;
-            //nets.Read(bmsize, 0, sizeof(uint)); //reading first 4 bytes (which contains the size of the message)
+           
             await nets.ReadAsync(bmsize, 0, sizeof(uint)); //reading first 4 bytes (which contains the size of the message)
 
             Array.Reverse(bmsize); //change from big endian to little endian
@@ -97,12 +97,7 @@ namespace IoTWeight
 
             await nets.ReadAsync(bmsg, 0, msize); //read the message
 
-            msg = Encoding.ASCII.GetString(bmsg); //convert it to string
-
-            //TODO:  delete later !!!!!!!!!!!!!!!
-            //object o2 = null;
-            //int i2 = (int)o2;   // Error  
-                
+            msg = Encoding.ASCII.GetString(bmsg); //convert it to string   
             return msg;   
         }
     }

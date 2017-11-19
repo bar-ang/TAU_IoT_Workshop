@@ -1,11 +1,18 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
 using Android.App;
 using Android.Content;
 using Android.OS;
+using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Microsoft.WindowsAzure.MobileServices;
 using System.Threading.Tasks;
+using Java.Util;
+using Java.Net;
 
 namespace IoTWeight
 {
@@ -14,17 +21,9 @@ namespace IoTWeight
     {
         private IMobileServiceTable<UsersTable> UsersTableRef;
         private IMobileServiceTable<weighTable> weighTableRef;
-        private float enteredHeight = 0;
-        private string ourUserId = ToDoActivity.CurrentActivity.Currentuserid;
+        float enteredHeight = 0;
+        string ourUserId = ToDoActivity.CurrentActivity.Currentuserid;
        
-
-        //TODO:  when Raspberry is incorporated:  check case where user first tries to 
-        //calculate BMI,  but he has no weighs in the database,  then he goes back and 
-        //weighs himself,  and then tries to calculate BMI again.
-
-        //TODO:  updated profile:   change height, gender, age.  Also?  age should go up with time.  handle it.
-        //TODO:  mention categories only apply for people over 20.  
-
         protected override async void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -130,7 +129,6 @@ namespace IoTWeight
                     if (weighRecords.Count == 0)
                     {
                         CreateAndShowDialog( "No previous weighs were found. Please weigh yourself and try again", "Cannot calculate BMI");
-                        //TODO:   return to main screen after user presses back once
                     }
                     else
                     {
@@ -141,17 +139,12 @@ namespace IoTWeight
                         //https://en.wikipedia.org/wiki/Body_mass_index
                         double heigtSquared = Math.Pow(height, 2);
                         double BMI = weight / heigtSquared;
-                        //String.Format("{0:0.00}", 123.4567);
                         string BMIInStringFormat = String.Format("{0:0.00}", BMI);
                         string BMI_message = "Your most recent weight = " + weight + "\nYour BMI = " + BMIInStringFormat;
                         var BMItext = FindViewById<TextView>(Resource.Id.BMI_TextView);
                         BMItext.Visibility = ViewStates.Visible;
                         BMItext.Text = BMI_message;
                         CalculateBMICategory(BMI);
-                       
-                        //Intent i = new Intent(Main_Menu.this, NextActivity.class);
-                        //finish();  //Kill the activity from which you will go to next activity 
-                        //startActivity(i);
                     }
                 }
 
@@ -185,7 +178,7 @@ namespace IoTWeight
                 if (weighRecords.Count == 0)
                 {
                     CreateAndShowDialog("Cannot calculate BMI", "No previous weighs were found. Please weigh yourself and try again");
-                    //TODO:   return to main screen after user presses back once
+                    
                 }
                 else
                 {
@@ -194,10 +187,8 @@ namespace IoTWeight
                     float weight = mostRecendWeigh.weigh;
                     //BMI formula from wikipedia:   BMI = weight in kg / (height in meters)^2
                     //https://en.wikipedia.org/wiki/Body_mass_index
-                    //TODO:  make sure user didn't enter height of zero
                     double heigtSquared = Math.Pow(enteredHeight, 2);
                     double BMI = weight / heigtSquared;
-                    //string BMIInStringFormat = Convert.ToString(BMI);
                     string BMIInStringFormat = String.Format("{0:0.00}", BMI);
                     string BMI_message = "Your most recent weight = " + weight + "\nYour BMI = " + BMIInStringFormat;
                     var BMItext = FindViewById<TextView>(Resource.Id.BMI_TextView);

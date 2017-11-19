@@ -27,23 +27,12 @@ namespace IoTWeight
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
-            base.OnCreate(savedInstanceState);
-            //SetContentView(Resource.Layout.ChooseDisplay);    
+            base.OnCreate(savedInstanceState);   
         }
 
 
-        //protected override void OnStop()
-        //{
-        //    base.OnStop();
-        //    if (rgTimePeriod != null)
-        //        rgTimePeriod.ClearCheck();
-        //    if (rgDisplayFormat != null)
-        //        rgDisplayFormat.ClearCheck();
-        //}
-
         protected override void OnStart()
         {
-            //Log.Debug("OnStart", "OnStart called, App is Active");
             base.OnStart();
             SetContentView(Resource.Layout.ChooseDisplay);
 
@@ -55,8 +44,7 @@ namespace IoTWeight
             rgDisplayFormat = FindViewById<RadioGroup>(Resource.Id.radioGroupDisplayFormat);
             rgDisplayFormat.ClearCheck();
             rgDisplayFormat.CheckedChange += OnCheckedChange;
-            //string message = "time Period = " + timePeriod + ",   DisplayFormat = " + displayFormat;
-            //Console.WriteLine(message);
+          
             isTimePeriodSelected = 0;
             isDisplayFormatSelected = 0;
             timePeriod = "not chosen";
@@ -83,7 +71,6 @@ namespace IoTWeight
                 {
                     Console.WriteLine("Converted '{0}' to {1}.", value, number);
                     string message = "Converted " + value + "to " + number;
-                    //CreateAndShowDialog(message, "debug");
                     inputYear = number;
                 }
 
@@ -91,7 +78,6 @@ namespace IoTWeight
                 {
                     Console.WriteLine("Unable to convert '{0}'.", value);
                     string message = "Unable to convert " + value;
-                    //CreateAndShowDialog(message, "CONVERSION ERROR");
                     inputYear = 0;
                 }
             };
@@ -100,7 +86,6 @@ namespace IoTWeight
             {
                 if (inputYear > 0)
                 {
-                    //CreateAndShowDialog("", "Help me Debugg");
                     int days = calculateNumberOfDays(inputYear);
                     timePeriod = days.ToString();
                     startWeighHistoryActivity();

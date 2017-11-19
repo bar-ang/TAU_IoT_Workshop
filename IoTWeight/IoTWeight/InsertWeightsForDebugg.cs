@@ -30,7 +30,6 @@ namespace IoTWeight
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.InsertWeights);
 
-            // Create your application here
             MobileServiceClient client = ToDoActivity.CurrentActivity.CurrentClient;
             weighTableRef = client.GetTable<weighTable>();
             UsersTableRef = client.GetTable<UsersTable>();

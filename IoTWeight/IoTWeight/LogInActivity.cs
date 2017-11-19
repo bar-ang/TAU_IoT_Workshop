@@ -82,34 +82,45 @@ namespace IoTWeight
                     {
                         CookieManager.Instance.RemoveAllCookie();
                         await client.LogoutAsync();
-                        //CreateAndShowDialog(string.Format("You are now logged out - {0}", user.UserId), "Logged out!");
                     }
                     user = null;
-                    
+
+                    var intent = new Intent(this, typeof(ToDoActivity));
+                    intent.AddFlags(ActivityFlags.ClearTop);
+                    StartActivity(intent);
+                    Finish();
+
                 }
                 catch (Exception ex)
                 {
-                    CreateAndShowDialog(ex.Message, "Logout failed");
+                    CreateAndShowDialog(ex.Message, "Logout failed.\nPlease Exit the application and try again");
                 }
 
-                var intent = new Intent(this, typeof(ToDoActivity));
-                intent.AddFlags(ActivityFlags.ClearTop);
-                StartActivity(intent);
-                //Console.WriteLine("In LogOut after StartActivity");
-                Finish();    
+                 
             };
 
         }
 
         
+        //In case Log Out fails:
         void CreateAndShowDialog(string message, string title)
         {
             var builder = new AlertDialog.Builder(this);
             builder.SetMessage(message);
             builder.SetTitle(title);
             builder.SetNeutralButton("OK", (sender, args) => {
+                Finish();
             });
             builder.Create().Show();
+        }
+
+        void disableAllButtons()
+        {
+            FindViewById<Button>(Resource.Id.GetStats).Visibility = ViewStates.Gone;
+            FindViewById<Button>(Resource.Id.StartWeigh).Visibility = ViewStates.Gone;
+            FindViewById<Button>(Resource.Id.BMI).Visibility = ViewStates.Gone;
+            FindViewById<Button>(Resource.Id.update).Visibility = ViewStates.Gone;
+            FindViewById<Button>(Resource.Id.ButtonLogout).Visibility = ViewStates.Gone;
         }
     }
 }

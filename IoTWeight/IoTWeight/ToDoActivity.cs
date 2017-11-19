@@ -146,13 +146,13 @@ namespace IoTWeight
             string userName = await Authenticate();
             if (userName != "failed")
             {
+                
                 var intent = new Intent(this, typeof(LogInActivity));
                 intent.PutExtra("userName", userName);
                 StartActivity(intent);
-                Console.WriteLine("In LogInUser after StartActivity");
-                Finish();
-            }
-            //TODO:  google Finish after StartActivity. 
+                loginTv.Visibility = ViewStates.Gone;
+                loginProg.Visibility = ViewStates.Gone;
+            } 
             else
             {
                 CreateAndShowDialog("Unable to authenticate.", "Sorry");
@@ -164,10 +164,16 @@ namespace IoTWeight
         public async void LoginUserAsDifferentUser(View view)
         {
 
+            TextView loginTv = FindViewById<TextView>(Resource.Id.tv_login_msg);
+            ProgressBar loginProg = FindViewById<ProgressBar>(Resource.Id.LoginProgressCircle);
+
             Button logInButton = FindViewById<Button>(Resource.Id.buttonLoginUser);
             logInButton.Visibility = ViewStates.Gone;
             Button logInAsDifferentUserButton = FindViewById<Button>(Resource.Id.buttonLoginDiffrentUser);
             logInAsDifferentUserButton.Visibility = ViewStates.Gone;
+
+            loginProg.Visibility = ViewStates.Visible;
+            loginTv.Text = "Please wait...";
 
             string userName = await Authenticate(true);
             if (userName != "failed")
@@ -175,8 +181,8 @@ namespace IoTWeight
                 var intent = new Intent(this, typeof(LogInActivity));
                 intent.PutExtra("userName", userName);
                 StartActivity(intent);
-                Console.WriteLine("In LoginUserAsDifferentUser after StartActivity");
-                Finish();
+                loginTv.Visibility = ViewStates.Gone;
+                loginProg.Visibility = ViewStates.Gone;
             }
             
             else
